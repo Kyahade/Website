@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6f6f6;
+}
+
+header {
+  background: linear-gradient(to right, #1b308a, #2895dd);
+  color: white;
+  padding: 0;
+}
+
+.hero {
+  background: url('NUU.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1b308a;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero-box h1 {
+  font-size: 2.5em;
+  color: #1b308a;
+  margin-bottom: 20px;
+}
+
+.hero-box p {
+  font-size: 1em;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.btn-blue {
+  background-color: #2196f3;
+}
+
+.btn-green {
+  background-color: #4caf50;
+}
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-box {
+  background-color: white;
+  padding: 30px;
+  width: 160px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  transform: scale(1.05);
+  background-color: #eaeaea;
+}
+
+.admin {
+  color: #b71c1c;
+}
+
+footer {
+  background-color: #1b308a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .hero-box {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  .hero-box h1 {
+    font-size: 2em;
+  }
+
+  .hero-box p {
+    font-size: 0.95em;
+  }
+
+  .service-box {
+    width: 120px;
+    padding: 20px;
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero-overlay {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .hero-box {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .hero-box h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-box p {
+    font-size: 0.9em;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 80%;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .hero-box h1 {
+    font-size: 1.5em;
+  }
+
+  .hero-box p {
+    font-size: 0.85em;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+}
+

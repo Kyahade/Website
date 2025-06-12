@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="try.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header class="header2">
+        <div class="testimonial">
+            <div class="avatar2"></div>
+            <div class="testimonial-text">
+                <h1 class="testimonial-title">NATIONAL</h1>
+                <h1 class="testimonial-title">UNIVERSITY</h1>
+                </div>
+            </div>
+    </header>
+    <header class="header3"></header>
+    <br><br>
+
+    <div class="form-wrapper">
+  <h2 class="form-title1">Online application</h2>
+  <div class="form-container3">
+    <h4>Reminder</h4><br>
+    <p>Please provide your correct and complete information. <br>
+Fields marked with asterisk (<span class="textt">*</span>) are required.</p>
+
+</div>
+  </div>
+    </div>
+
+    <div class="form-container">
+<h2>Application Term & Course/Strand</h2>
+<hr><br>
+    <label for="campus">Branch:<span class="textt">*</span></label>
+    <select id="campus">
+    <option value="NU MOA">NU MOA</option>
+    <option value="NU Manila">NU Manila</option>
+    <option value="NU Cebu">NU Cebu</option>
+    <option value="NU Fairview">NU Fairview</option>   
+    </select>
+    <label for="sy">Academic year:<span class="textt">*</span></label>
+    <select id="sy">
+    <option value="2025-2026">2025-2026</option>
+    <option value="2026-2027">2026-2027</option>
+    <option value="2027-2028">2027-2028</option>
+    </select>
+    <label for="academicTerm">Academic Term:<span class="textt">*</span></label>
+<select id="academicTerm">
+  <option value="1st Term">1st Term</option>
+  <option value="2nd Term">2nd Term</option>
+  <option value="3rd Term">3rd Term</option>
+</select>
+    </select>
+    <label for="apply">Applying For:<span class="textt">*</span></label>
+    <select id="apply">
+    <option value=""></option>
+    <option value="Freshmen">Freshmen</option>
+    <option value="Transferee">Transferee</option>
+    <option value="Second Degree Taker">Second Degree Taker</option>
+    <option value="Cross Enrollee">Cross Enrollee</option>
+    <option value="Graduate Studies">Graduate Studies</option>
+    </select>
+    <label for="program">Course:<span class="textt">*</span></label>
+    <select id="program">
+      <option value=""> </option>
+    <option value="BSBA - Financial Management">BSBA - Financial Management</option>
+  <option value="BS Accountancy">BS Accountancy</option>
+  <option value="BSBA - Marketing Management">BSBA - Marketing Management</option>
+  <option value="BS Tourism Management">BS Tourism Management</option>
+  <option value="BSIT-MWA">BS Information Technology - Mobile and Web Applications</option>
+  <option value="BS Nursing">BS Nursing</option>
+  <option value="BS Medical Technology">BS Medical Technology</option>
+  <option value="BS Psychology">BS Psychology</option>
+  <option value="Doctor of Optometry">Doctor of Optometry</option>
+  <option value="Doctor of Dental Medicine">Doctor of Dental Medicine (DMD)</option>
+  <option value="BS Architecture">BS Architecture</option>
+    </select>
+    <br><br><br>
+
+    <h2>Basic Information</h2>
+    <hr><br>
+    <label for="fname">First Name:<span class="textt">*</span></label>
+    <input type="text" id="fname"><br>
+    <label for="mname">Middle Name:<span class="textt">*</span></label>
+    <input type="text" id="mname"><br>
+    <label for="lname">Last Name:<span class="textt">*</span></label> 
+    <input type="text" id="lname"><br>  
+    <label for="email">Email:<span class="textt">*</span></label> 
+    <input type="email" id="email"><br>  
+    <label for="phone">Phone Number:<span class="textt">*</span></label> 
+    <input type="tel" id="phone"><br>  
+    <label>Gender:<span class="textt">*</span></label>
+    <div class="gender-group">
+    <label><input type="radio" name="gender" value="Male"> Male</label>
+    <label><input type="radio" name="gender" value="Female"> Female</label>
+    <label><input type="radio" name="gender" value="Other"> Other</label>
+    </div>
+    <label for="dob">Date of Birth:<span class="textt">*</span></label>
+    <input type="date" id="dob"><br>
+    </select><br>
+    <label>
+    <input type="checkbox" id="terms"> I accept the Terms and Conditions
+    </label>
+    <button type="button" id="submitBtn">Submit</button>      
+    <p id="display_text"></p>
+    </div>
+</body>
+</html>

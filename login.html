@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Style2.css" />
+</head>
+<body>
+  <header class="nu-header">
+  <div class="nu-header-content">
+    <img src="NU.jpg" alt="NU Logo" class="nu-logo" />
+    <div class="nu-title">
+      <h1>NATIONAL</h1>
+      <h1>UNIVERSITY</h1>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+ <main class="main-content">
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Enter your email" required />
+      <input type="text" id="loginPhone" placeholder="Enter your phone number" required />
+      <button type="submit">Login</button><br><br>
+      <a href="NUQ.html" class="back-btn">← Back to Home</a>
+    </form>
+    <div id="loginMessage" class="message"></div>
+  </div>
+</main>
+
+
+<footer class="nu-footer">
+  <div class="nu-footer-content">
+    <p>
+      NU Quest v1.1 ©2025. National University <br />
+      <a href="#">About</a> |
+      <a href="#">Terms of Use</a> |
+      <a href="#">Privacy Policy</a>
+    </p>
+  </div>
+</footer>
+
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+  <script>
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBjoiPRYbuA66QfsgG8bea0rgxML3dQRK4",
+      authDomain: "mywebapp-9cce0.firebaseapp.com",
+      projectId: "mywebapp-9cce0",
+      storageBucket: "mywebapp-9cce0.firebasestorage.app",
+      messagingSenderId: "505722389930",
+      appId: "1:505722389930:web:716c66ab01d7133f1197d3"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // Login form handler
+    document.addEventListener("DOMContentLoaded", () => {
+      const loginForm = document.getElementById("loginForm");
+      const loginMessage = document.getElementById("loginMessage");
+
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById("loginEmail").value.trim();
+        const phone = document.getElementById("loginPhone").value.trim();
+
+        if (!email || !phone) {
+          loginMessage.textContent = "Please fill in all fields.";
+          return;
+        }
+
+        const phonePattern = /^\d{10,11}$/;
+        if (!phonePattern.test(phone)) {
+          loginMessage.textContent = "Invalid phone number (must be 10–11 digits).";
+          return;
+        }
+
+        db.collection("registrations")
+          .where("email", "==", email)
+          .where("phone", "==", phone)
+          .get()
+          .then((snapshot) => {
+            if (!snapshot.empty) {
+              loginMessage.style.color = "green";
+              loginMessage.textContent = "Login successful! Redirecting...";
+              setTimeout(() => {
+                window.location.href = "info.html"; // Change this to your next page
+              }, 2000);
+            } else {
+              loginMessage.style.color = "red";
+              loginMessage.textContent = "User not found. Please check your input.";
+            }
+          })
+          .catch((error) => {
+            console.error("Login error:", error);
+            loginMessage.textContent = "An error occurred. Please try again.";
+          });
+      });
+    });
+  </script>
+</body>
+</html>

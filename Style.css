@@ -1,0 +1,371 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+			  display: flex;
+			  background-color: #333;
+              justify-content: center;
+			}
+
+			/* Style the navigation bar links */
+			.navbar a {
+			  color: white;
+			  padding: 14px 20px;
+			  text-decoration: none;
+			  text-align: center;
+			}
+
+			/* Change color on hover */
+			.navbar a:hover {
+			  background-color: #ddd;
+			  color: black;
+			}
+body {
+  background-color: #f4f4f4;
+  padding: 20px;
+  color: #000;
+}
+
+.header {
+  background-color: #56a9a8;
+  background-image: url('NUU.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header2 {
+  background-color: #34418E;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header3 {
+  background-color: #c5de25;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 15px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  text-decoration: underline;
+}
+
+.signup-form {
+  background: #000;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-form button,
+.signup-form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.google-signup {
+  background: #4285F4;
+  color: white;
+  border: none;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background: white;
+}
+
+.testimonial {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.testimonial-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimonial-description {
+  font-size: 14px;
+}
+
+.testimonial-text {
+  max-width: 100%;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  background-image: url('Profile.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.avatar2 {
+  width: 80px;
+  height: 80px;
+  background-image: url('NU.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.footer {
+  background: #34418E;
+  text-align: center;
+  padding: 30px;
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.column {
+  width: 600px;
+    min-height: 100px;
+    background-color: #f2f2f2;
+    border: 2px solid #333;
+    border-radius: 8px;
+    text-align: block;
+    line-height: normal;
+    padding: 40px;
+}
+
+.title {
+  text-align: center;
+}
+
+.form-container {
+   background-color: #fff;
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    max-width: 900px;
+    color: #000000;
+    text-align: left;
+}
+
+.form-container2 {
+  background-color: rgba(23, 22, 19, 0.677);
+  padding: 20px;
+  max-width: 550px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: white;
+  border: 5px solid black;
+  text-align:justify;
+}
+
+.form-container3 {
+     background-color: #55c5e9; /* similar blue */
+  color: white;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto; /* centers the box horizontally */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+}
+.button5 {
+background-color: #262e30; /* similar blue */
+  color: white;
+  padding: 20px;
+  max-width: 200px;
+  margin: 300px auto; /* centers the box horizontally */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-title1 {
+  font-size: 20px;
+  text-align: left;
+  
+}
+
+.form-wrapper {
+   max-width: 900px;
+  margin: 40px auto; /* Center the whole block */
+}
+
+.textt {
+color: red;
+}
+
+h2 {
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.gender-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#display_text {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .signup-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header, .header2 {
+    text-align: center;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    max-width: 90%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text p,
+  .cta {
+    font-size: 14px;
+  }
+
+  .testimonial-title {
+    font-size: 16px;
+  }
+
+  .testimonial-description {
+    font-size: 12px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar2 {
+    width: 60px;
+    height: 60px;
+  }
+  @media (max-width: 700px) {
+			  .row, .navbar, .row1, .row2, .row3 {   
+			    flex-direction: column;
+			  }
+			}
+}
